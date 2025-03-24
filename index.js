@@ -7,10 +7,13 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/dokumentation.html");
 });
 
-const mysql = require("mysql"); // npm install mysql
+const mysql = require("mysql"); // npm install mysql --- nodemon index.js --- rs(restart)
 con = mysql.createConnection({
   host: "localhost", 
   user: "root", 
   password: "", 
   database: "webbserverprogrammering", 
 });
+
+app.use(express.json());
+
